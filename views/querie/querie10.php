@@ -20,12 +20,12 @@ Html::submitButton('Отправить',array('class' => 'btn btn-success', 'sty
 <?php if($field->load(Yii::$app->request->post())):
   ?> 
 <table class="table table-striped">
- <tr>
- <th>Марка </th>
- <th >Номер машины</th>
- <th >Дата отправки</th>
- <th >Место отправки</th>
- <th >Место назначение</th>
+	 <tr>
+	 <th>Марка </th>
+	 <th >Номер машины</th>
+	 <th >Дата отправки</th>
+	 <th >Место отправки</th>
+	 <th >Место назначение</th>
 </tr>
 <?php foreach ($querie as $qu): ?>
 <tr>

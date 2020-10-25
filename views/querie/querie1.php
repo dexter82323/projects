@@ -11,15 +11,15 @@ use yii\widgets\LinkPager;
 <p align="center" style="font-size: 28px">Данные об автопарке :</p>
  <table class="table table-striped">
  <tr>
- 	<th>ID</th>
- <th >Марка</th>
- <th>Вид</th>
- <th>Номер</th>
-<th>Дата получения</th>
-<th>Дата списания</th>
-<th>Пробег</th>
-<th>Вместимость</th>
-<th>Грузоподъемность</th>
+	<th>ID</th>
+	<th >Марка</th>
+	<th>Вид</th>
+	<th>Номер</th>
+	<th>Дата получения</th>
+	<th>Дата списания</th>
+	<th>Пробег</th>
+	<th>Вместимость</th>
+	<th>Грузоподъемность</th>
 </tr>
 <?php foreach ($auto as $aut): ?>
 <tr>

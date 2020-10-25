@@ -31,7 +31,11 @@ public function actionQuerie1(){
             'defaultPageSize' => 10,
             'totalCount' => $pag->count(),
         ]);
-	$auto=AutoForm::find()->with('type')->offset($pagination->offset)->limit($pagination->limit)->all();
+	$auto=AutoForm::find()
+	->with('type')
+	->offset($pagination->offset)
+	->limit($pagination->limit)
+	->all();
 	return $this->render('querie1',compact('auto','pagination'));
 }
 
@@ -40,7 +44,11 @@ public function actionQuerie2(){
 	$field = new InputForm;
 	if($field->load(Yii::$app->request->post())){
 	$string = $field->field;
-	$querie=$driver->with('auto')->rightjoin('auto','drivers.Id_auto=auto.Id_auto')->where(['auto.License'=>$string])->all();
+	$querie=$driver
+	->with('auto')
+	->rightjoin('auto','drivers.Id_auto=auto.Id_auto')
+	->where(['auto.License'=>$string])
+	->all();
 
 }
 	return $this->render('querie2',compact('field','driver','querie'));
@@ -48,12 +56,19 @@ public function actionQuerie2(){
 }
 
 public function actionQuerie3(){
-	$querie=DriverForm::find()->with('auto')->orderBy('id_Auto')->all();
+	$querie=DriverForm::find()
+	->with('auto')
+	->orderBy('id_Auto')
+	->all();
 	return $this->render('querie3',compact('querie'));
 }
 
 public function actionQuerie4(){
-	$querie=DriverForm::find()->with('route')->with('auto')->where('id_route',null)->all();
+	$querie=DriverForm::find()
+	->with('route')
+	->with('auto')
+	->where('id_route',null)
+	->all();
 	return $this->render('querie4',compact('querie'));
 }
 
@@ -74,7 +89,12 @@ public function actionQuerie6(){
 		$string = $field->field;
 		$date1 = $field->field2;
 		$date2 = $field->field3;
-		$querie = RepairsForm::find()->with('auto')->where(['Id_auto'=>$string])->andWhere(['>=','Date_of_receiving',$date1])->andWhere(['<=','Date_of_receiving',$date2])->all();
+		$querie = RepairsForm::find()
+		->with('auto')
+		->where(['Id_auto'=>$string])
+		->andWhere(['>=','Date_of_receiving',$date1])
+		->andWhere(['<=','Date_of_receiving',$date2])
+		->all();
 	}
 	return $this->render('querie6',compact('field','items','querie'));
 }
@@ -95,13 +115,18 @@ public function actionQuerie8(){
 	$items = ArrayHelper::map(TypeForm::find()->all(),'Id_Type', 'Type');
 	if($field->load(Yii::$app->request->post())){
 		$string = $field->field;
-		$querie = AutoForm::find()->with('type')->where(['Type' => $string])->all();
+		$querie = AutoForm::find()
+		->with('type')
+		->where(['Type' => $string])
+		->all();
 	}
 	return $this->render('querie8',compact('field','querie','items'));
 }
 
 public function actionQuerie9(){
-	$querie = TypeForm::find()->with('auto')->all();
+	$querie = TypeForm::find()
+	->with('auto')
+	->all();
 	return $this->render('querie9',compact('querie'));
 }
 
@@ -112,7 +137,12 @@ public function actionQuerie10(){
 		$string = $field->field;
 		$date1 = $field->field2;
 		$date2 = $field->field3;
-		$querie = CarryingForm::find()->with('auto')->where(['Id_truck'=>$string])->andWhere(['>=','Date_of_start',$date1])->andWhere(['<=','Date_of_start',$date2])->all();
+		$querie = CarryingForm::find()
+		->with('auto')
+		->where(['Id_truck'=>$string])
+		->andWhere(['>=','Date_of_start',$date1])
+		->andWhere(['<=','Date_of_start',$date2])
+		->all();
 	}
 	return $this->render('querie10',compact('querie','field','items'));
 }
@@ -124,7 +154,12 @@ public function actionQuerie11(){
 		$string = $field->field;
 		$date1 = $field->field2;
 		$date2 = $field->field3;
-		$querie = RepairsForm::find()->with('auto')->where(['Id_auto'=>$string])->andWhere(['>=','Date_of_receiving',$date1])->andWhere(['<=','Date_of_receiving',$date2])->all(); 
+		$querie = RepairsForm::find()
+		->with('auto')
+		->where(['Id_auto'=>$string])
+		->andWhere(['>=','Date_of_receiving',$date1])
+		->andWhere(['<=','Date_of_receiving',$date2])
+		->all(); 
 	}
 	return $this->render('querie11',compact('querie','field','items'));
 }
@@ -156,7 +191,9 @@ public function actionQuerie13(){
 	if($field2->load(Yii::$app->request->post())){
 
 			$string2 = $field2->field;
-		 	$querie = ServiceStaffForm::find()->where(['Id_brigadier'=>$string2])->all();
+		 	$querie = ServiceStaffForm::find()
+		 	->where(['Id_brigadier'=>$string2])
+		 	->all();
 		}
 	return $this->render('querie13',compact('querie','field','items','string','field2','string2'));
 }
@@ -168,7 +205,12 @@ public function actionQuerie14(){
 		$string = $field->field;
 		$date1 = $field->field2;
 		$date2 = $field->field3;
-		$querie = RepairsForm::find()->with('auto')->with('service_staff')->where(['Id_staff'=>$string])->andWhere(['>=','Date_of_receiving',$date1])->andWhere(['<=','Date_of_receiving',$date2])->all();
+		$querie = RepairsForm::find()->with('auto')
+		->with('service_staff')
+		->where(['Id_staff'=>$string])
+		->andWhere(['>=','Date_of_receiving',$date1])
+		->andWhere(['<=','Date_of_receiving',$date2])
+		->all();
 	}
 	return $this->render('querie14',compact('querie','field','items'));
 }

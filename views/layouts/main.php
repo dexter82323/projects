@@ -22,8 +22,7 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php $this->registerCsrfMetaTags() ?>
     <link rel="shortcut icon" href="<?php echo Yii::$app->request->baseUrl;
-    ?>/img/Kadirov.png" type="image/x-icon" />
-    
+    ?>/img/Kadirov.png" type="image/x-icon" />    
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
@@ -38,8 +37,7 @@ AppAsset::register($this);
             'class' => 'navbar-default navbar-fixed-top ',
         ],
     ]);
-    echo Nav::widget([
-    
+    echo Nav::widget([    
         'options' => ['class' => 'navbar-nav navbar-right' ],
         'items' => [
             ['label' => 'О нас ', 'url' => ['/site/index'],'options'=>[
@@ -63,34 +61,25 @@ AppAsset::register($this);
             Yii::$app->user->isGuest ? (
                 ['label' => 'Вход', 'url' => ['/site/login']]
             ) : (
-
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
                 . Html::submitButton(
                     'Выход (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link logout']
                 )
-
                 . Html::endForm()
-
                 . '</li>'
-
             ),
-
         ],
     ]);
     NavBar::end();
     ?>
-
-  
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
         <?= $content ?>
- 
 </div>
-
 <footer class="footer">
     <div class="container">
         <div style="height: 30px">
@@ -100,7 +89,6 @@ AppAsset::register($this);
     </div>
     </div>
 </footer>
-
 <?php $this->endBody() ?>
 </body>
 </html>
