@@ -9,8 +9,7 @@ $this->title = 'Ростов-авто';
 
 <?php $this->title ='Ростов-авто'; ?>
 <section id="hello" class="home bg-mega">
-                <div class="overlay" style="height: 760px">
-                  
+                <div class="overlay" style="height: 760px">   
                 </div>
                 <div class="container">
                     <div class="row">
@@ -25,7 +24,6 @@ $this->title = 'Ростов-авто';
                     </div>
                 </div>
             </section> 
-
 <section id="about" class="about roomy-100" >
                 <div class="container">
                     <div class="row">
@@ -46,8 +44,7 @@ $this->title = 'Ростов-авто';
                                          во всех районах Ростова-на-Дону.
                                         Все машины оборудованы спутниковой системой ГЛОНАСС и тревожной кнопкой.  Экологический класс двигателей:
                                          Евро-4 и Евро-5.  </p>
-                                    </div>
-                                 
+                                    </div>                    
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -109,8 +106,7 @@ $this->title = 'Ростов-авто';
                                     <b>Рабочие</b>
                                     <br>
                                      <img src="img/worker1.png">
-                            </div> 
-                                                
+                            </div>                            
                         </div>
                     </div>
                 </div>
@@ -126,11 +122,6 @@ $this->title = 'Ростов-авто';
             </div>
 </div>
 </section>
-
-
-
-
-
 <script>
     $(document).ready(function(){
         $('a[href^="#"], *[data-href^="#"]').on('click', function(e){

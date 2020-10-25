@@ -2,7 +2,6 @@
 use yii\helpers\Html; 
 use yii\widgets\LinkPager;
 use yii\widgets\ActiveForm;
-
 ?>
 <br>
 <br>
@@ -22,9 +21,9 @@ Html::submitButton('Отправить',array('class' => 'btn btn-success', 'sty
   ?> 
  <table class="table table-striped">
  <tr>
- <th >Марка</th>
- <th>Номер</th>
-<th>Кол-во использумых узлов </th>
+	<th >Марка</th>
+	<th>Номер</th>
+	<th>Кол-во использумых узлов </th>
 </tr>
 <tr><?php foreach ($querie as $qu): ?>
 	<td><?php echo $qu->auto['Brand'] ?></td>
