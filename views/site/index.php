@@ -97,21 +97,17 @@ $this->title = 'Ростов-авто';
                                     <p>Мы гордимся своей кадровой политикой и стремимся сделать ее еще лучше. По мнению наших сотрудников, благодаря корпоративной культуре, основанной на формировании международных команд, и нашей приверженности к совершенствованию бизнеса и улучшению мира компания Ростов-Авто является одной из лучших компаний, открывающей перед персоналом широкие карьерные возможности. </p>
                                 </div>
                             </div>
-                            <div class="pict1 col-md-6 " style="height: 600px; text-align: center; "> 
+                            <div class="pict1 col-md-12" style="text-align: center"> 
                                     <b>Начальник цеха</b>
                                     <br>
                                     <img src="img/worker2.png" class="Kadirov">
                             </div>
-                            <div class="col-md-6 "style="height: 600px; text-align: center"> 
-                                    <b>Рабочие</b>
-                                    <br>
-                                     <img src="img/worker1.png">
-                            </div>                            
+                                               
                         </div>
                     </div>
                 </div>
             </section>
-
+            <br>
             <section id="maps">
             <div class="main_maps text-center fix">
                 <div class= "overlay">
@@ -137,7 +133,7 @@ $this->title = 'Ростов-авто';
                                 var mapOptions = {
                                     zoom: 14,
                                     scrollwheel: false,
-                                    center: new google.maps.LatLng(43.317600, 45.693990),
+                                    center: new google.maps.LatLng(47.231300, 39.723300),
                                     mapTypeId: google.maps.MapTypeId.ROADMAP
                                 };
                                 var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
